@@ -14,9 +14,10 @@ solo_only: true
 # Container image to use
 container: vllm-node
 
-# Mod required to fix autoround weight loading issues
+# Mods required to fix autoround weight loading issues and Anthropic Messages API
 mods:
   - mods/fix-qwen3-next-autoround
+  - mods/fix-anthropic-messages-api
 
 # Default settings (can be overridden via CLI)
 defaults:

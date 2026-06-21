@@ -16,10 +16,11 @@ container: vllm-node-tf5
 build_args:
   - --tf5
 
-# Mod required to fix ROPE syntax error
+# Mod required to fix ROPE syntax error and Anthropic Messages API
 mods:
   # - mods/fix-qwen3.5-autoround
   - mods/fix-qwen3.5-chat-template
+  - mods/fix-anthropic-messages-api
 
 # Default settings (can be overridden via CLI)
 defaults:
@@ -44,7 +45,7 @@ command: |
     --load-format fastsafetensors \
     --enable-prefix-caching \
     --enable-auto-tool-choice \
-    --tool-call-parser qwen3_xml \
+    --tool-call-parser qwen3_coder \
     --reasoning-parser qwen3 \
     --max-num-batched-tokens {max_num_batched_tokens} \
     --trust-remote-code \

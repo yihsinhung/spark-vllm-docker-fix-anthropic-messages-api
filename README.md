@@ -1703,3 +1703,6 @@ When `-c` is given without explicit hosts, the script checks `COPY_HOSTS` in `.e
 ### Hardware Architecture
 
 **Note:** This project targets `12.1a` architecture (NVIDIA GB10 / DGX Spark). If you are using different hardware, you can use `--gpu-arch` flag in `./build-and-copy.sh`.
+
+### Reference:
+- [spark-vllm-docker](https://github.com/eugr/spark-vllm-docker)
